@@ -1,0 +1,183 @@
+body
+{
+	font-family: sans-serif;
+	text-align: center;
+}
+
+.title-text
+{
+	width: 1000px;
+	margin: 0 auto;
+	margin-top: 21px;
+	margin-bottom: 21px;
+	overflow: hidden;
+	user-select: none;
+	-moz-user-select: none;
+}
+
+.attack-button
+{
+	margin: 0 auto;
+	display: block;
+	width: 300px;
+	border-radius: 25px;
+	background-color: rgba(47,59,86, 0.9);
+	color: white;
+	cursor: pointer;
+	user-select: none;
+	-moz-user-select: none;
+}
+
+.attack-button:hover
+{
+	background-color: rgba(57,69,96,0.9);
+}
+
+.attack-button:active
+{
+	background-color: rgba(37,49,76,0.9);
+	padding-top: 1px;
+}
+
+.attack-button-disabled
+{
+	margin: 0 auto;
+	display: block;
+	width: 300px;
+	border-radius: 25px;
+	background-color: rgba(47,59,86, 0.9);
+	color: rgb(255,255,255, 0.5);
+	cursor: default;
+	user-select: none;
+	-moz-user-select: none;
+	transition: transform 1s;
+	transition-delay: 650ms;
+	animation: attack-wait 1s linear;
+}
+
+.attack-button-disabled:hover
+{
+	background-color: rgba(47,59,86, 0.9);
+}
+
+.attack-button-disabled:active
+{
+	background-color: rgba(47,59,86, 0.9);
+	padding-top: 0px;
+
+}
+
+.restart-button
+{
+	margin: 0 auto;
+	display: block;
+	width: 300px;
+	border-radius: 25px;
+	background-color: rgba(47,59,86, 0.9);
+	color: white;
+	cursor: pointer;
+	user-select: none;
+	-moz-user-select: none;
+}
+
+.restart-button:hover
+{
+	background-color: rgba(57,69,96,0.9);
+}
+
+.restart-button:active
+{
+	background-color: rgba(37,49,76,0.9);
+	padding-top: 1px;
+}
+
+@keyframes attack-wait
+{
+	0%
+	{
+		width: 0px;
+		opacity: 0;
+	}
+  
+	100%
+	{
+		width 300px;
+		opacity: 1;
+	}
+}
+
+.swap-text
+{
+	display: block;
+	transition: transform ease-in-out 500ms;
+}
+
+.swap-text-inline
+{
+	display: inline-block;
+	width: auto;
+	transition: transform ease-in-out 100ms;
+}
+
+.card-container
+{
+	display: flex;
+	position: relative;
+	margin: 0 auto;
+	width: 1000px;
+	height: 125px;
+	background-color: rgba(0,0,0,0.1);
+	padding: 15px;
+	border-radius: 25px;
+	overflow: hidden;
+	user-select: none;
+	-moz-user-select: none;
+}
+
+.card-container:after
+{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	display: block;
+	content: '';
+	width: 1000px;
+	height: 125px;
+	padding: 15px;
+	border-radius: 25px;
+	box-shadow: 0px 0px 15px inset rgb(0,0,0,0.3);
+}
+
+.remove-after:after
+{
+	content: none;
+}
+
+.normal-shadow
+{
+	box-shadow: 0px 0px 15px inset rgb(0,0,0,0.3);
+}
+
+.card
+{
+	margin: 0 auto;
+	width: 190px;
+	height: 100px;
+	background-color: rgba(255,255,255,1);
+	padding: 15px;
+	border-radius: 25px;
+	box-shadow: 0px 0px 5px rgb(0,0,0,0.3);
+	transform: translateY(-150px);
+	transition: all linear 500ms;
+}
+
+.card-label-name
+{	
+	display: block;
+	margin-bottom: 2px;
+}
+
+.card-label-health
+{
+	display: block;
+}
